@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jothika Vinayagam - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Keyframe Animations */
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px #FF1493, 0 0 20px #8A2BE2; }
+            50% { text-shadow: 0 0 20px #FF1493, 0 0 40px #8A2BE2; }
+        }
+
+        @keyframes moveText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes floatParticles {
+            0% { transform: translateY(0px); opacity: 0.7; }
+            50% { transform: translateY(-20px); opacity: 1; }
+            100% { transform: translateY(0px); opacity: 0.7; }
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1B1F3B, #6A0572);
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background */
+        .background-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #FF1493;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: floatParticles 5s infinite ease-in-out alternate;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #120E43, #FF1493);
+            padding: 50px 20px;
+            position: relative;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+            animation: glow 2s infinite alternate, moveText 2s infinite ease-in-out;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #2C2F58;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(255, 20, 147, 0.3);
+        }
+
+        h2 {
+            color: #FF1493;
+            border-bottom: 3px solid #6A0572;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: linear-gradient(135deg, #8A2BE2, #FF1493);
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #FF1493;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .download-btn:hover {
+            background: #8A2BE2;
+            transform: scale(1.1);
+        }
+
+        .fun-fact {
+            font-style: italic;
+            color: #FF1493;
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+
+    <header>
+        <img src="C:\Users\jothi\OneDrive\Desktop\HTML2\img\New folder\STUDENT_P.jpg" alt="Jothika Vinayagam" class="profile-img">
+        <h1>Jothika Vinayagam</h1>
+        <p>Passionate Coder | UI/UX Enthusiast | Problem Solver</p>
+        <button class="download-btn" onclick="downloadResume()">Download Resume</button>
+    </header>
+
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I'm a passionate coder and creative thinker with expertise in C programming, Python, web development, and cybersecurity. I love solving coding challenges and designing user-friendly interfaces.</p>
+        
+        <h2>Skills</h2>
+        <ul>
+            <li>C, Python, HTML, CSS, JavaScript</li>
+            <li>Data Structures & Algorithms</li>
+            <li>Web Development</li>
+            <li>UI/UX Design (Figma)</li>
+            <li>Cybersecurity</li>
+        </ul>
+
+        <h2>Projects</h2>
+        <ul>
+            <li>NFT & Crypto Trader Website (Figma)</li>
+            <li>To-Do List App</li>
+            <li>Dot Connect Game</li>
+        </ul>
+
+        <h2>Internships</h2>
+        <ul>
+            <li>Web Development Intern - Interpe</li>
+            <li>Cybersecurity Intern - Bigbucks</li>
+        </ul>
+
+        <h2>Certifications</h2>
+        <ul>
+            <li>Cybersecurity Foundations - LinkedIn Learning</li>
+            <li>HTML Essential Training - LinkedIn Learning</li>
+            <li>Python Data Structures & Algorithms - LinkedIn Learning</li>
+        </ul>
+
+        <h2>Achievements</h2>
+        <ul>
+            <li>1165+ Tracks Completed on SkillRack</li>
+            <li>Attended 2024 GLOBAL VIRTUAL SUMMIT by GELP</li>
+            <li>Designed a Digital Reading Platform</li>
+        </ul>
+
+        <p class="fun-fact">Fun Fact: People say I look great in white, yellow, blue, and purple!</p>
+    </div>
+
+    <script>
+        function downloadResume() {
+            const element = document.createElement('a');
+            const content = document.documentElement.outerHTML;
+            const blob = new Blob([content], { type: 'text/html' });
+            element.href = URL.createObjectURL(blob);
+            element.download = 'Jothika_Vinayagam_Resume.html';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        // Generate floating particles
+        function createParticles() {
+            const container = document.querySelector('.background-animation');
+            for (let i = 0; i < 30; i++) {
+                let particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + "vw";
+                particle.style.top = Math.random() * 100 + "vh";
+                particle.style.animationDuration = (Math.random() * 5 + 3) + "s";
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+    </script>
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: jothikavinayagam@example.com</p>
+        <p>LinkedIn: linkedin.com/in/jothikavinayagam</p>
+        <p>GitHub: github.com/jothikavinayagam</p>
+        <p>Phone: +91 98765 43210</p>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.NDKNbQ-I9ApLLVp-E6HSPwHaHa&pid=Api&P=0&h=180" alt="QR Code" class="qr-code">
+    </div>
+
+</body>
+</html>
